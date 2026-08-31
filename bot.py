@@ -14078,12 +14078,11 @@ def _monitor_system_stats():
     return stats
 
 
-def _progress_bar(current, total, width=12):
-    if total <= 0:
-        return "░" * width + " 0%"
-    pct    = min(current / total, 1.0)
-    filled = int(pct * width)
-    return "█" * filled + "░" * (width - filled) + f" {pct*100:.1f}%"
+def _progress_bar(pct: int, width: int = 20) -> str:
+    """`▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░ 70%` style bar."""
+    pct = max(0, min(100, int(pct)))
+    filled = int(round(width * pct / 100))
+    return "▓" * filled + "░" * (width - filled) + f" {pct:>3}%"
 
 
 def _run_diagnostics():
