@@ -537,7 +537,7 @@ KEYRING_FILE  = DIRS["data"] / "keyring.json"   # tiny local cache only
 # ┌──────────────────────────────────────────────────────────────┐
 # │  BOT TOKEN  add karo.   ││
 # └──────────────────────────────────────────────────────────────┘
-BOT_TOKEN_HARDCODED = "8684906028:AAEc4WHzAfQZBS1iaUREz5yziUfW4wBlGEY"   # ← ADD BOT TOKEN
+BOT_TOKEN_HARDCODED = "8218159061:AAEnTt7cPGYHLSwXzOQhkb1xMsWWXr00jQM"   # ← ADD BOT TOKEN
 TOKEN = (
     os.environ.get("BOT_TOKEN")
     or os.environ.get("MAIN_BOT_TOKEN")
